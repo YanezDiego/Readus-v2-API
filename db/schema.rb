@@ -10,16 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_174743) do
+ActiveRecord::Schema.define(version: 2019_05_22_170728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "most_shareds", force: :cascade do |t|
+    t.string "title"
+    t.string "img_url"
+    t.string "abstract"
+    t.string "byline"
+    t.string "url"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string "display_title"
+    t.string "img_src"
     t.string "byline"
     t.string "headline"
     t.string "summary_short"
+    t.string "movie_url"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tech_stories", force: :cascade do |t|
+    t.string "title"
+    t.string "img_url"
+    t.string "abstract"
+    t.string "article_url"
+    t.string "byline"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
