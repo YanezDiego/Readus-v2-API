@@ -1,0 +1,3 @@
+class MostShared < ApplicationRecord
+
+end
