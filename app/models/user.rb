@@ -8,6 +8,6 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { in: 6..20 }
 
     has_many :movies
-    has_many :tech_stories
-    has_many :most_shareds
+    has_many :techstories
+    has_many :mostshareds
 end
