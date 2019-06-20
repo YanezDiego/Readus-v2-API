@@ -1,2 +1,0 @@
-class TechStorie < ApplicationRecord
-end
